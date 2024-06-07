@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Snake Game</h1>
+    <div class="main">
+        <div>
+            <div id="infoPanel">
+                <div id="currentDifficulty">Difficulté : Moyen</div>
+                <div id="personalBest">Mon record personnel : 0</div>
+                <div id="applesEaten">Pommes mangées : 0</div>
+                <div id="bonusesCollected">Bonus attrapés : 0</div>
+            </div>
+            <canvas id="gameCanvas" width="500" height="500"></canvas>
+            <div id="buttons">
+                    <button id="restartButton">Recommencer</button>
+                    <div class="dot"></div>
+                     
+                    <button class="difficulty" data-level="facile">Facile</button>
+                    <button class="difficulty" data-level="moyen">Moyen</button>
+                    <button class="difficulty" data-level="difficile">Difficile</button>
+                </div>
+        </div>
+        <div>
+            <div id="scoreBoard"></div>
+        </div>
+    </div>
+    <div class="rules">
+        <h2>Régles du jeu...</h2>
+        <h3>De base</h3>
+        <p>Le serpent se déplace en suivant la tête : le corps du serpent suit toujours la tête.</p>
+        <p>Manger un fruit fait grandir le serpent d'un segment et rapporte dix points.</p>
+        <p>Si la tête du serpent entre en collision avec son propre corps, la partie est perdue.</p>
+        <p>Le plateau de jeu est un donut : cela signifie que le bord supérieur est connecté au bord inférieur, et le bord gauche est connecté au bord droit. Le serpent peut traverser le bord du plateau et réapparaîtra de l'autre côté.</p>
+        <h3>Supplémentaires</h3>
+        <p>Le jeu comprend également des obstacles à éviter. Si le serpent entre en collision avec un obstacle, la partie est terminée.</p>
+        <p>De plus, des bonus sont présents pour permettre au serpent de se déplacer plus rapidement.</p>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
